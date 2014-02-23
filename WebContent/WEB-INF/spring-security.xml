@@ -1,0 +1,43 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+ 
+	<http auto-config="true">
+		<intercept-url pattern="/CM_*" access="ROLE_1" />
+		<intercept-url pattern="/DM_*" access="ROLE_2" />
+		<intercept-url pattern="/OTHER_*" access="ROLE_3" />
+		<intercept-url pattern="/SAL_*" access="ROLE_4" />
+		<intercept-url pattern="/RE_*" access="ROLE_5" />
+		<intercept-url pattern="/SA_*" access="ROLE_6" />
+		<intercept-url pattern="/IU_*" access="ROLE_7" />
+		<intercept-url pattern="/MU_*" access="ROLE_8" />
+		
+<!-- 		<intercept-url pattern="/hello*" access="ROLE_1" /> -->
+		<access-denied-handler error-page="/403.do"/>
+		<form-login login-page="/Userlogin.do" default-target-url="/LoginType.do"
+			authentication-failure-url="/loginfailed.do" />
+		<logout logout-success-url="/logout.do" />
+	</http>
+ 
+<authentication-manager>
+	   <authentication-provider>
+	   <password-encoder hash="sha" />
+		<jdbc-user-service data-source-ref="dataSource"
+ 
+		   users-by-username-query="
+		      select user_id,password_hash, enabled 
+		      from credentials where user_id=?" 
+ 
+		   authorities-by-username-query="
+		      select c.user_id, ar.role from credentials c, authority_roles ar 
+		      where c.user_id = ar.userid and c.user_id =?  " 
+		      
+		/>
+	   </authentication-provider>
+	</authentication-manager>
+ 
+</beans:beans>

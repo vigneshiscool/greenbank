@@ -1,0 +1,24 @@
+<!DOCTYPE html5>
+<html>
+<head>
+
+<title>Green Bank</title>
+
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+</head>
+<body>
+	<div class="banner" align="center">
+		<H1>Green Bank</H1>
+		<H5>(A secure banking system)</H5>
+	</div>
+
+	<div onclick="window.location.href='Userlogin.html'" class="enter"
+		align="center">Enter the system</div>
+<div style="margin-top:20%;">
+	<footer align="right">
+		Developed by Vignesh P. Kannan Shriganth Sundararaj
+	<footer>
+</div>
+</body>
+</html>

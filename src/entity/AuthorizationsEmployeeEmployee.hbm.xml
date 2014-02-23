@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 21, 2013 10:26:11 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.AuthorizationsEmployeeEmployee" table="authorizations_employee_employee" catalog="greenbank">
+        <id name="authorizationId" type="int">
+            <column name="authorization_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="authorizedBy" type="string">
+            <column name="authorized_by" length="50" not-null="true" />
+        </property>
+        <property name="authorizedTo" type="string">
+            <column name="authorized_to" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

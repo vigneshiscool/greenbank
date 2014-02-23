@@ -1,0 +1,27 @@
+body{
+	background-color: #DADBE6;
+}
+
+.banner{
+	margin-top:10px;
+	margin-left:10%;
+	width:80%;
+	background-color:blue;
+	color:white;
+	font-size:16;
+	border-radius:10px;
+	border:2px solid blue;
+}
+
+.enter{
+	color:white;
+	border-radius:10px;
+	border:2px solid blue;
+	background-color:blue;
+	box-shadow:4px 4px 4px black;
+	margin-left:20%;
+	margin-top:10%;
+	width:60%;
+	cursor:pointer;
+}
+

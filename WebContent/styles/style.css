@@ -1,0 +1,48 @@
+
+body
+{
+background-image:url('images/bg.png');
+background-color:#cccccc;
+}
+
+a:link{
+	color:white;
+}
+
+a:hover{
+	color: black;
+}
+
+.pLogout{
+	float: right;
+	color: white;
+	cursor:pointer;
+}
+
+.pHome{
+	color: white;
+	cursor:pointer;
+}
+
+.banner{
+	margin-top:10px;
+	margin-left:10%;
+	width:80%;
+	background-color: #808080;
+	color: white;
+	font-size:18;
+	border-radius:10px;
+	border:2px solid #808080;
+}
+
+.enter{
+	color: white;
+	border-radius:10px;
+	border:2px solid #808080;
+	background-color:#808080;
+	margin-left:20%;
+	margin-top:10%;
+	width:60%;
+	cursor:pointer;
+}
+

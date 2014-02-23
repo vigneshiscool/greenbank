@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 21, 2013 10:26:11 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="entity.Transactions" table="transactions" catalog="greenbank">
+		<id name="transactionId" type="int">
+			<column name="transaction_id" />
+			<generator class="assigned" />
+		</id>
+		<property name="transactionDatetime" type="timestamp">
+			<column name="transaction_datetime" length="19" not-null="true" />
+		</property>
+
+		<property name="transactionAmount" type="double">
+			<column name="transaction_amount" precision="22" scale="0"
+				not-null="true" />
+		</property>
+		<property name="transactionFrom" type="string">
+			<column name="transaction_from" length="50" not-null="true" />
+		</property>
+		<property name="transactionTo" type="string">
+			<column name="transaction_to" length="50" />
+		</property>
+		<property name="transactionDescription" type="string">
+			<column name="transaction_description" length="250" />
+		</property>
+		<property name="transactionStatus" type="string">
+			<column name="transaction_status" length="45" />
+		</property>
+	</class>
+</hibernate-mapping>

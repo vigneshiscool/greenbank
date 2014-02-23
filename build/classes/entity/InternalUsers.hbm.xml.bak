@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 21, 2013 10:26:11 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="entity.InternalUsers" table="internal_users"
+		catalog="greenbank">
+		<id name="userId" type="string">
+			<column name="user_id" length="50" />
+			<generator class="assigned" />
+		</id>
+		<property name="userName" type="string">
+			<column name="user_name" length="50" not-null="true" />
+		</property>
+		<property name="dept_sales" type="int">
+			<column name="dept_sales" not-null="true" />
+		</property>
+		<property name="dept_it" type="int">
+			<column name="dept_it" not-null="true" />
+		</property>
+		<property name="dept_cm" type="int">
+			<column name="dept_cm" not-null="true" />
+		</property>
+		<property name="dept_tm" type="int">
+			<column name="dept_tm" not-null="true" />
+		</property>
+		<property name="dept_hr" type="int">
+			<column name="dept_hr" not-null="true" />
+		</property>
+		<property name="userRole" type="int">
+			<column name="user_role" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
